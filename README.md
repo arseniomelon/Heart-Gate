@@ -4,7 +4,7 @@ A fullscreen passphrase prompt with hit points. Get it wrong and you lose a hear
 
 It's a joke, not a security tool. See [Warnings](#warnings).
 
-![demo](docs/demo.gif)
+![demo](demo.gif)
 
 ## What it does
 
