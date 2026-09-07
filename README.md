@@ -4,6 +4,8 @@ A fullscreen passphrase prompt with hit points. Get it wrong and you lose a hear
 
 It's a joke, not a security tool. See [Warnings](#warnings).
 
+![demo](docs/demo.gif)
+
 ## What it does
 
 - Runs fullscreen and always-on-top at login, and fights to keep the foreground
