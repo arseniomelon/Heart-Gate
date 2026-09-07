@@ -1,4 +1,4 @@
-# heart-gate
+# Heart-gate
 
 A fullscreen passphrase prompt with hit points. Get it wrong and you lose a heart. Lose all three and the heart shatters, the screen reads GAME OVER, and your PC shuts down.
 
@@ -15,7 +15,7 @@ It's a joke, not a security tool. See [Warnings](#warnings).
 
 ## Requirements
 
-- Windows 10 or 11 (it runs on Linux and macOS, but the shutdown step is skipped)
+- Windows 10 or 11 (Not tested yet on MacOS or Linux)
 - Python 3.8+
 
 No packages to install. Everything it uses — `tkinter`, `ctypes`, `random`, `subprocess`, `sys` — ships with Python.
@@ -37,7 +37,7 @@ All settings live at the top of `heart_gate.py`.
 | `MSG` | The on-screen text. All of it lives at the top of the file |
 | `DEV_ESCAPE` | `True` | Enables the `Ctrl+Shift+Q` escape hatch |
 | `KEEP_FOCUS` | `True` | Re-grabs the foreground if another window steals it |
-| `HEART`, `PIXEL`, `BIG_PIXEL` | — | The sprite. See below |
+| `HEART`, `PIXEL`, `BIG_PIXEL` | — | The sprite |
 
 Turn `SHUTDOWN_ENABLED` on only after you've watched the death animation a few times and know that `shutdown /a` aborts it.
 
@@ -91,7 +91,7 @@ Because each square is a separate canvas object, the shatter animation gets to f
 
 ## Warnings
 
-- **This is not security.** `Ctrl+Alt+Del` bypasses it, Task Manager kills it, Safe Mode ignores it, and the passphrase sits in plain text in the source. Keep your real Windows password on.
+- **This is not security.** `Ctrl+Alt+Del` bypasses it, Safe Mode ignores it, and the passphrase sits in plain text in the source. Keep your real Windows password on.
 - **The shutdown is real.** With `SHUTDOWN_ENABLED = True`, three wrong guesses closes your machine and anything unsaved goes with it. Keep `SHUTDOWN_DELAY` long enough to type `shutdown /a`.
 - **Don't put it on someone else's PC.** Software that shuts a machine down without the owner knowing is not a prank, it's a support ticket at best.
 
